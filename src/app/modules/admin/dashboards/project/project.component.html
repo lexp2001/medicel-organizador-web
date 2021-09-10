@@ -37,7 +37,8 @@
                     <button
                         class="fuse-mat-button-rounded"
                         mat-flat-button
-                        [color]="'primary'">
+                        [color]="'primary'"
+                        style="background-color: #003399!important;">
                         <mat-icon
                             class="icon-size-5"
                             [svgIcon]="'heroicons_solid:cog'"></mat-icon>
@@ -111,17 +112,17 @@
                                                 [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                         </button>
                                         <mat-menu #summaryMenu="matMenu">
-                                            <button mat-menu-item>Yesterday</button>
-                                            <button mat-menu-item>2 days ago</button>
-                                            <button mat-menu-item>3 days ago</button>
+                                            <button mat-menu-item>Hoy</button>
+                                            <button mat-menu-item>Mañana</button>
+                                            <button mat-menu-item>Pasado Mañana</button>
                                         </mat-menu>
                                     </div>
                                 </div>
                                 <div class="flex flex-col items-center mt-2">
-                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-blue-500">21</div>
-                                    <div class="text-lg font-medium text-blue-600 dark:text-blue-500">Eventos</div>
+                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none medicel-dark-blue">21</div>
+                                    <div class="text-lg font-medium medicel-dark-blue">Eventos</div>
                                     <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
-                                        <div class="text-md font-medium truncate">Completed:</div>
+                                        <div class="text-md font-medium truncate">Para Hoy:</div>
                                         <div class="ml-1.5 text-lg font-semibold">13</div>
                                     </div>
                                 </div>
@@ -138,19 +139,19 @@
                                                 class="icon-size-5"
                                                 [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                         </button>
-                                        <mat-menu #overdueMenu="matMenu">
-                                            <button mat-menu-item>Yesterday</button>
-                                            <button mat-menu-item>2 days ago</button>
-                                            <button mat-menu-item>3 days ago</button>
+                                        <mat-menu #summaryMenu="matMenu">
+                                            <button mat-menu-item>Hoy</button>
+                                            <button mat-menu-item>Mañana</button>
+                                            <button mat-menu-item>Pasado Mañana</button>
                                         </mat-menu>
                                     </div>
                                 </div>
                                 <div class="flex flex-col items-center mt-2">
-                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-red-500">17</div>
-                                    <div class="text-lg font-medium text-red-600 dark:text-red-500">Tests</div>
+                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none medicel-light-blue">83</div>
+                                    <div class="text-lg font-medium medicel-light-blue">Tests</div>
                                     <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
-                                        <div class="text-md font-medium truncate">Positivos:</div>
-                                        <div class="ml-1.5 text-lg font-semibold">1</div>
+                                        <div class="text-md font-medium truncate">Para Hoy:</div>
+                                        <div class="ml-1.5 text-lg font-semibold">19</div>
                                     </div>
                                 </div>
                             </div>
@@ -166,26 +167,26 @@
                                                 class="icon-size-5"
                                                 [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                         </button>
-                                        <mat-menu #issuesMenu="matMenu">
-                                            <button mat-menu-item>Yesterday</button>
-                                            <button mat-menu-item>2 days ago</button>
-                                            <button mat-menu-item>3 days ago</button>
+                                        <mat-menu #summaryMenu="matMenu">
+                                            <button mat-menu-item>Hoy</button>
+                                            <button mat-menu-item>Mañana</button>
+                                            <button mat-menu-item>Pasado Mañana</button>
                                         </mat-menu>
                                     </div>
                                 </div>
                                 <div class="flex flex-col items-center mt-2">
-                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-amber-500">24</div>
-                                    <div class="text-lg font-medium text-amber-600 dark:text-amber-500">Asistentes</div>
+                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none medicel-dark-blue">240</div>
+                                    <div class="text-lg font-medium medicel-dark-blue">Asistentes</div>
                                     <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
-                                        <div class="text-md font-medium truncate">asistentes:</div>
-                                        <div class="ml-1.5 text-lg font-semibold">19</div>
+                                        <div class="text-md font-medium truncate">Para Hoy:</div>
+                                        <div class="ml-1.5 text-lg font-semibold">98</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Features -->
                             <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                 <div class="flex items-start justify-between">
-                                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Trabajadores</div>
+                                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Promociones</div>
                                     <div class="ml-2 -mt-2 -mr-3">
                                         <button
                                             mat-icon-button
@@ -194,39 +195,39 @@
                                                 class="icon-size-5"
                                                 [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                         </button>
-                                        <mat-menu #featuresMenu="matMenu">
-                                            <button mat-menu-item>Yesterday</button>
-                                            <button mat-menu-item>2 days ago</button>
-                                            <button mat-menu-item>3 days ago</button>
+                                        <mat-menu #summaryMenu="matMenu">
+                                            <button mat-menu-item>Hoy</button>
+                                            <button mat-menu-item>Mañana</button>
+                                            <button mat-menu-item>Pasado Mañana</button>
                                         </mat-menu>
                                     </div>
                                 </div>
                                 <div class="flex flex-col items-center mt-2">
-                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-green-500">38</div>
-                                    <div class="text-lg font-medium text-green-600 dark:text-green-500">Trabajdores</div>
+                                    <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none medicel-med-blue">38</div>
+                                    <div class="text-lg font-medium medicel-med-blue">Promociones</div>
                                     <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
-                                        <div class="text-md font-medium truncate">trabajadores:</div>
-                                        <div class="ml-1.5 text-lg font-semibold">16</div>
+                                        <div class="text-md font-medium truncate">Activas Hoy:</div>
+                                        <div class="ml-1.5 text-lg font-semibold">30</div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Github issues summary -->
                             <div class="sm:col-span-2 md:col-span-4 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                 <div class="flex flex-col sm:flex-row items-start justify-between">
-                                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Github Issues Summary</div>
+                                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Resumen de Eventos Recientes</div>
                                     <div class="mt-3 sm:mt-0 sm:ml-2">
                                         <mat-button-toggle-group
                                             value="this-week"
                                             #githubIssuesWeekSelector="matButtonToggleGroup">
-                                            <mat-button-toggle value="last-week">Last Week</mat-button-toggle>
-                                            <mat-button-toggle value="this-week">This Week</mat-button-toggle>
+                                            <mat-button-toggle value="last-week">Última Semana</mat-button-toggle>
+                                            <mat-button-toggle value="this-week">Esta Semana</mat-button-toggle>
                                         </mat-button-toggle-group>
                                     </div>
                                 </div>
                                 <div class="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
                                     <!-- New vs. Closed -->
                                     <div class="flex flex-col flex-auto">
-                                        <div class="font-medium text-secondary">New vs. Closed</div>
+                                        <div class="font-medium text-secondary">Eventos por Día</div>
                                         <div class="flex flex-col flex-auto">
                                             <apx-chart
                                                 class="flex-auto w-full h-80"
@@ -247,49 +248,49 @@
                                     </div>
                                     <!-- Overview -->
                                     <div class="flex flex-col">
-                                        <div class="font-medium text-secondary">Overview</div>
+                                        <div class="font-medium text-secondary">Estadísticas</div>
                                         <div class="flex-auto grid grid-cols-4 gap-4 mt-6">
                                             <!-- New issues -->
                                             <div class="col-span-2 flex flex-col items-center justify-center py-8 px-1 rounded-2xl bg-indigo-50 text-indigo-800 dark:bg-white dark:bg-opacity-5 dark:text-indigo-400">
                                                 <div class="text-5xl sm:text-7xl font-semibold leading-none tracking-tight">
                                                     {{data.githubIssues.overview[githubIssuesWeekSelector.value]['new-issues']}}
                                                 </div>
-                                                <div class="mt-1 text-sm sm:text-lg font-medium">New Issues</div>
+                                                <div class="mt-1 text-sm sm:text-lg font-medium">Nuevos Eventos</div>
                                             </div>
                                             <!-- Closed -->
                                             <div class="col-span-2 flex flex-col items-center justify-center py-8 px-1 rounded-2xl bg-green-50 text-green-800 dark:bg-white dark:bg-opacity-5 dark:text-green-500">
                                                 <div class="text-5xl sm:text-7xl font-semibold leading-none tracking-tight">
                                                     {{data.githubIssues.overview[githubIssuesWeekSelector.value]['closed-issues']}}
                                                 </div>
-                                                <div class="mt-1 text-sm sm:text-lg font-medium">Closed</div>
+                                                <div class="mt-1 text-sm sm:text-lg font-medium">Concluídos</div>
                                             </div>
                                             <!-- Fixed -->
                                             <div class="col-span-2 sm:col-span-1 flex flex-col items-center justify-center py-8 px-1 rounded-2xl bg-gray-100 text-secondary dark:bg-white dark:bg-opacity-5">
                                                 <div class="text-5xl font-semibold leading-none tracking-tight">
                                                     {{data.githubIssues.overview[githubIssuesWeekSelector.value]['fixed']}}
                                                 </div>
-                                                <div class="mt-1 text-sm font-medium text-center">Fixed</div>
+                                                <div class="mt-1 text-sm font-medium text-center">Capacidad</div>
                                             </div>
                                             <!-- Won't fix -->
                                             <div class="col-span-2 sm:col-span-1 flex flex-col items-center justify-center py-8 px-1 rounded-2xl bg-gray-100 text-secondary dark:bg-white dark:bg-opacity-5">
                                                 <div class="text-5xl font-semibold leading-none tracking-tight">
                                                     {{data.githubIssues.overview[githubIssuesWeekSelector.value]['wont-fix']}}
                                                 </div>
-                                                <div class="mt-1 text-sm font-medium text-center">Won't Fix</div>
+                                                <div class="mt-1 text-sm font-medium text-center">Registrados</div>
                                             </div>
                                             <!-- Re-opened -->
                                             <div class="col-span-2 sm:col-span-1 flex flex-col items-center justify-center py-8 px-1 rounded-2xl bg-gray-100 text-secondary dark:bg-white dark:bg-opacity-5">
                                                 <div class="text-5xl font-semibold leading-none tracking-tight">
                                                     {{data.githubIssues.overview[githubIssuesWeekSelector.value]['re-opened']}}
                                                 </div>
-                                                <div class="mt-1 text-sm font-medium text-center">Re-opened</div>
+                                                <div class="mt-1 text-sm font-medium text-center">Asistentes</div>
                                             </div>
                                             <!-- Needs triage -->
                                             <div class="col-span-2 sm:col-span-1 flex flex-col items-center justify-center py-8 px-1 rounded-2xl bg-gray-100 text-secondary dark:bg-white dark:bg-opacity-5">
                                                 <div class="text-5xl font-semibold leading-none tracking-tight">
                                                     {{data.githubIssues.overview[githubIssuesWeekSelector.value]['needs-triage']}}
                                                 </div>
-                                                <div class="mt-1 text-sm font-medium text-center">Needs Triage</div>
+                                                <div class="mt-1 text-sm font-medium text-center">Testeados</div>
                                             </div>
                                         </div>
                                     </div>

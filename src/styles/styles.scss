@@ -2,3 +2,24 @@
 /*  @ Import/write your custom styles here.
 /*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
 /* ----------------------------------------------------------------------------------------------------- */
+
+:root {
+    --fuse-primary: #003399!important;
+    --own-primary: #003399!important;
+  }
+
+.medicel-dark-blue{
+    color: #003399!important;
+}
+
+.medicel-med-blue{
+    color: #0c7dab!important;
+}
+
+.medicel-light-blue{
+    color: #0faad3!important;
+}
+
+.medicel-gray{
+    color: #d9d9d9!important;
+}
