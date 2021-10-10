@@ -299,13 +299,13 @@
                             <!-- Task distribution -->
                             <div class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                 <div class="flex flex-col sm:flex-row items-start justify-between">
-                                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Task Distribution</div>
+                                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Covid-19 / Dosis y Tests</div>
                                     <div class="mt-3 sm:mt-0 sm:ml-2">
                                         <mat-button-toggle-group
                                             value="this-week"
                                             #taskDistributionWeekSelector="matButtonToggleGroup">
-                                            <mat-button-toggle value="last-week">Last Week</mat-button-toggle>
-                                            <mat-button-toggle value="this-week">This Week</mat-button-toggle>
+                                            <mat-button-toggle value="last-week">Última Semana</mat-button-toggle>
+                                            <mat-button-toggle value="this-week">Semana Actual</mat-button-toggle>
                                         </mat-button-toggle-group>
                                     </div>
                                 </div>
@@ -328,13 +328,13 @@
                                         <div class="text-5xl font-semibold leading-none tracking-tighter">
                                             {{data.taskDistribution.overview[taskDistributionWeekSelector.value]['new']}}
                                         </div>
-                                        <div class="mt-1 text-center text-secondary">New tasks</div>
+                                        <div class="mt-1 text-center text-secondary">1era Dosis</div>
                                     </div>
                                     <div class="flex flex-col items-center justify-center p-6 sm:p-8">
                                         <div class="text-5xl font-semibold leading-none tracking-tighter">
                                             {{data.taskDistribution.overview[taskDistributionWeekSelector.value]['completed']}}
                                         </div>
-                                        <div class="mt-1 text-center text-secondary">Completed tasks</div>
+                                        <div class="mt-1 text-center text-secondary">2da Dosis</div>
                                     </div>
                                 </div>
                             </div>

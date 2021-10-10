@@ -21,7 +21,7 @@ export const project = {
                 'needs-triage' : 5
             }
         },
-        labels  : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        labels  : ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sáb', 'Dom'],
         series  : {
             'this-week': [
                 {
@@ -60,7 +60,7 @@ export const project = {
                 'completed': 260
             }
         },
-        labels  : ['API', 'Backend', 'Frontend', 'Issues'],
+        labels  : ['Positivos', 'Testeados', '1era Dosis', '2da Dosis'],
         series  : {
             'this-week': [15, 20, 38, 27],
             'last-week': [19, 16, 42, 23]
