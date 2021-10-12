@@ -11,11 +11,11 @@ export const defaultNavigation: FuseNavigationItem[] = [
     },
     
     {
-        id   : 'fiscalizaciones',
-        title: 'Fiscalizaciones',
+        id   : 'events',
+        title: 'Eventos',
         type : 'basic',
-        icon : 'heroicons_outline:document-search',
-        link : '/apps/calendar'
+        icon : 'heroicons_outline:user-group',
+        link : '/events'
     },
 
     {
