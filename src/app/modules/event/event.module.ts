@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FuseCardModule } from '@fuse/components/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
     MatButtonModule,
     MatButtonToggleModule,
     CommonModule,
+    MatIconModule,
     FuseCardModule ],
     
 })
