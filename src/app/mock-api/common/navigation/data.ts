@@ -12,9 +12,9 @@ export const defaultNavigation: FuseNavigationItem[] = [
     
     {
         id   : 'events',
-        title: 'Eventos',
+        title: 'Faenas',
         type : 'basic',
-        icon : 'heroicons_outline:user-group',
+        icon : 'heroicons_outline:cog',
         link : '/events'
     },
 
@@ -28,17 +28,17 @@ export const defaultNavigation: FuseNavigationItem[] = [
 
     {
         id   : 'promociones',
-        title: 'Promociones',
+        title: 'Usuarios',
         type : 'basic',
-        icon : 'mat_outline:label',
+        icon : 'heroicons_outline:user-group',
         link : '/example'
     },
 
     {
         id   : 'consejos',
-        title: 'Consejos',
+        title: 'Informes',
         type : 'basic',
-        icon : 'heroicons_outline:chat',
+        icon : 'heroicons_outline:document-duplicate',
         link : '/example'
     }
 ];
