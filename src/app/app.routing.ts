@@ -91,6 +91,13 @@ export const appRoutes: Route[] = [
             {
                 path: 'events', loadChildren: () => import('app/modules/event/event.module').then(m => m.EventModule)
             },
+            {
+                path: 'detail', loadChildren: () => import('app/modules/event-detail/event-detail.module').then(m => m.EventDetailModule)
+            }
+            ,
+            {
+                path: 'schedule', loadChildren: () => import('app/modules/schedule-detail/schedule-detail.module').then(m => m.ScheduleDetailModule)
+            }
 
         ]
     },

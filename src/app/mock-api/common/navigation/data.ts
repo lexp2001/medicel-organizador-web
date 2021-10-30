@@ -28,10 +28,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
 
     {
         id   : 'promociones',
-        title: 'Usuarios',
+        title: 'Trabajadores',
         type : 'basic',
         icon : 'heroicons_outline:user-group',
-        link : '/example'
+        link : '/workers'
     },
 
     {
