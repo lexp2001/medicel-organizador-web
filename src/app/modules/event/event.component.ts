@@ -18,12 +18,14 @@ export class EventComponent implements OnInit {
 
   constructor( private _laborService: LaborService) { }
   ngOnInit(): void {
-
+    
     this._laborService.get().
       subscribe(data => {
         console.info(data)
         this.laborData = data
       })
+
+    
   }
 
 }
