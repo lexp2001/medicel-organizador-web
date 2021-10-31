@@ -43,7 +43,7 @@ export class LaborService
     // -----------------------------------------------------------------------------------------------------
 
     /**
-     * Get the current logged in labor data
+     * Get the current labor data
      */
     get(): Observable<Labor>
     {

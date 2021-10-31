@@ -25,9 +25,9 @@
 }
 
 .mat-progress-spinner {
-    position: absolute;
+    // position: absolute;
     text-align: center;
-    top: 49%;
-    left: 44%;
+    top: calc(50% - 50px);
+    left: 50%;
   }
   

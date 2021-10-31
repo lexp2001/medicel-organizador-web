@@ -8,10 +8,32 @@
                     People here will get to know you with this information
                 </p>
                 <div class="flex flex-col gt-xs:flex-row">
-                    <mat-form-field class="flex-auto gt-xs:pr-3">
+
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
-                            [placeholder]="'Organización'">
+                            [placeholder]="'Nombre de la Faena (Obra)'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Nombre del Cliente'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+                    </mat-form-field>
+
+                    
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'URL de imagen de portada'">
                         <mat-icon
                             class="icon-size-5"
                             matPrefix
@@ -20,25 +42,7 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
-                            [placeholder]="'Cliente'">
-                        <mat-icon
-                            class="icon-size-5"
-                            matPrefix
-                            [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
-                    </mat-form-field>
-                    <mat-form-field class="flex-auto gt-xs:pl-3">
-                        <input
-                            matInput
-                            [placeholder]="'Tipo'">
-                        <mat-icon
-                            class="icon-size-5"
-                            matPrefix
-                            [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
-                    </mat-form-field>
-                    <mat-form-field class="flex-auto gt-xs:pl-3">
-                        <input
-                            matInput
-                            [placeholder]="'Nombre'">
+                            [placeholder]="'Fecha de inicio de la obra'">
                         <mat-icon
                             class="icon-size-5"
                             matPrefix
@@ -97,7 +101,17 @@
                 </mat-checkbox>
                 </div>
 
-               
+                <div class="flex items-center justify-end border-t -mx-8 mt-8 px-8 py-5 bg-gray-50 dark:bg-gray-700">
+                    <button mat-button>
+                        Cancel
+                    </button>
+                    <button
+                        class="px-6 ml-3"
+                        mat-flat-button
+                        [color]="'primary'">
+                        Save
+                    </button>
+                </div>
           
             </form>
     </div>

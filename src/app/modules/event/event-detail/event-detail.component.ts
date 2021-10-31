@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LaborService } from 'app/services/labor/labor.service'
+import { Labor } from 'app/interfaces/labor.types'
 
 export interface PeriodicElement {
   name: string;
@@ -18,14 +20,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
-  styleUrls: ['./event-detail.component.scss']
+  styleUrls: ['./event-detail.component.scss'],
+  providers: [LaborService]
 })
 export class EventDetailComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'go'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor( private _laborService: LaborService) { }
 
   ngOnInit(): void {
   }

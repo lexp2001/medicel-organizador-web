@@ -1,7 +1,5 @@
 <div class="flex flex-col flex-auto min-w-0">
 
-    <mat-progress-spinner mode="indeterminate" [strokeWidth]="4" [diameter]="50"></mat-progress-spinner>
-    
     <!-- Header -->
     <div
         class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
@@ -42,19 +40,10 @@
             </mat-button-toggle-group>
         </div>
 
-        <div class="flex flex-wrap items-start w-full max-w-400 -m-4">
+        <div class="flex flex-wrap items-start w-full max-w-400 -m-4" style="height: calc(100% - 100px);">
 
-            <!-- Card #1 
-            <fuse-card class="flex flex-col max-w-80 w-full filter-article">
-                <img class="object-cover" src="assets/images/macarrao-gourmet.webp" alt="Card cover image">
-                <div class="m-8">
-                    <div class="text-2xl font-semibold leading-tight">Most beautiful and quite places to see</div>
-                    <div class="mt-4">From rocky mountains to crystal clear lakes, there are the places you must see and
-                        enjoy.</div>
-                </div>
-            </fuse-card>-->
+            <mat-progress-spinner mode="indeterminate" [strokeWidth]="4" [diameter]="50"></mat-progress-spinner>
 
-            <!-- Card #34 -->
             <fuse-card *ngFor="let labor of laborData" class="flex flex-col max-w-80 w-full filter-listing m-2">
                 <img
                     class="object-cover"
@@ -89,7 +78,7 @@
                             class="px-3 mr-1"
                             mat-button
                             [color]="'primary'"
-                            [routerLink]="['/detail']">
+                            [routerLink]="['/events/detail']">
                             Detalles
                         </button>
                         <!-- <button
