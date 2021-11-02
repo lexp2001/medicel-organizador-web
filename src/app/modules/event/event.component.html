@@ -22,7 +22,7 @@
     <!-- Main -->
     <div class="flex-auto p-6 sm:p-10">
 
-        <div class="mb-6 sm:mb-12">
+        <!-- <div class="mb-6 sm:mb-12">
             <mat-button-toggle-group
                 class="flex flex-wrap -m-2">
                 <ng-container >
@@ -38,11 +38,11 @@
                     </mat-button-toggle>
                 </ng-container>
             </mat-button-toggle-group>
-        </div>
+        </div> -->
 
         <div class="flex flex-wrap items-start w-full max-w-400 -m-4" style="height: calc(100% - 100px);">
 
-            <mat-progress-spinner mode="indeterminate" [strokeWidth]="4" [diameter]="50"></mat-progress-spinner>
+            <mat-progress-bar *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>
 
             <fuse-card *ngFor="let labor of laborData" class="flex flex-col max-w-80 w-full filter-listing m-2">
                 <img
@@ -78,7 +78,7 @@
                             class="px-3 mr-1"
                             mat-button
                             [color]="'primary'"
-                            [routerLink]="['/events/detail']">
+                            [routerLink]="['/events/detail/'+labor._id]">
                             Detalles
                         </button>
                         <!-- <button

@@ -31,7 +31,7 @@ const routes: Routes = [
         component: EventComponent,
       },
       {
-        path: 'detail',
+        path: 'detail/:id',
         component: EventDetailComponent,
       },
       {

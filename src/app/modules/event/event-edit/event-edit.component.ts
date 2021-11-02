@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LaborService } from 'app/services/labor/labor.service'
-import { Labor } from 'app/interfaces/labor.types'
+import { Labor } from 'app/interfaces/labor.interface'
 
 @Component({
   selector: 'app-event-edit',
