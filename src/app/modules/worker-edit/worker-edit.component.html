@@ -1,0 +1,119 @@
+<div class="flex flex-col flex-auto min-w-0">
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+        <div class="max-w-3xl">
+            <form class="flex flex-col mt-4 px-8 pt-10 bg-card shadow rounded overflow-hidden">
+                <p class="text-lg font-medium">Profile</p>
+                <p class="text-secondary mb-6">
+                    People here will get to know you with this information
+                </p>
+                <div class="flex flex-col gt-xs:flex-row">
+
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Nombre de la Faena (Obra)'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:library'"></mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Nombre del Cliente'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:user'"></mat-icon>
+                    </mat-form-field>
+
+                    
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'URL de imagen de portada'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:link'"></mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Fecha de inicio de la obra'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:calendar'"></mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Ciudad'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:map'"></mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Estado'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:map'"></mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="flex-auto gt-xs:pl-3">
+                        <input
+                            matInput
+                            [placeholder]="'Dirección'">
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:map'"></mat-icon>
+                    </mat-form-field>
+                </div>
+          
+                <div class="flex">
+                    <mat-form-field class="fuse-mat-textarea flex-auto">
+                        <textarea
+                            matInput
+                            [placeholder]="'Descripción'"
+                            [rows]="3"></textarea>
+
+                        <mat-icon
+                            class="icon-size-5"
+                            matPrefix
+                            [svgIcon]="'heroicons_solid:menu-alt-2'">
+                        </mat-icon>
+                        
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-checkbox
+                    [color]="'primary'"
+                    [formControlName]="'rememberMe'">
+                  Status
+                </mat-checkbox>
+                </div>
+
+                <div class="flex items-center justify-end border-t -mx-8 mt-8 px-8 py-5 bg-gray-50 dark:bg-gray-700">
+                    <button mat-button>
+                        Cancel
+                    </button>
+                    <button
+                        class="px-6 ml-3"
+                        mat-flat-button
+                        [color]="'primary'">
+                        Save
+                    </button>
+                </div>
+          
+            </form>
+    </div>
+</div>
+

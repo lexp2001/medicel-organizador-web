@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { SharedModule } from 'app/shared/shared.module';
+import { WorkerEditComponent } from '../worker-edit/worker-edit.component';
 
 
 
@@ -41,6 +42,11 @@ const routes: Routes = [
       {
         path: 'edit',
         component: EventEditComponent,
+      },
+
+      {
+        path: 'worker',
+        component: WorkerEditComponent,
       }
     ]
   }
