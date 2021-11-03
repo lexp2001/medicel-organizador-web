@@ -90,6 +90,9 @@ export const appRoutes: Route[] = [
             },
             {
                 path: 'events', loadChildren: () => import('app/modules/event/event.module').then(m => m.EventModule)
+            },
+            {
+                path: 'workers', loadChildren: () => import('app/modules/worker/worker.module').then(m => m.WorkerModule)
             }
             ,
             {
