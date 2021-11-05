@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
-
 @Component({
   selector: 'app-worker-edit',
   templateUrl: './worker-edit.component.html',
@@ -12,9 +11,17 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 export class WorkerEditComponent implements OnInit {
 
-  constructor() { }
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
-  ngOnInit(): void {
+  constructor(private _formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required],
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    });
   }
-
 }
