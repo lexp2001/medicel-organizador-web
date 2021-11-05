@@ -15,7 +15,7 @@ export class EventComponent implements OnInit {
 
   @ViewChildren(FuseCardComponent, { read: ElementRef }) private _fuseCards: QueryList<ElementRef>;
 
-  labors: any
+  labors: LaborSharedService
   laborData: Labor[]
   showProgressBar: boolean
 
@@ -26,17 +26,17 @@ export class EventComponent implements OnInit {
     this.labors = this._laborSharedService
     console.info("_laborSharedService", this._laborSharedService)
 
-    if (!this._laborSharedService["labors"]) {
+    if (!this._laborSharedService.labors) {
       this.showProgressBar = true
       this._laborService.getLabors().
         subscribe(data => {
           console.info(data)
           this.laborData = data
-          this.labors["labors"] = data
+          this.labors.labors = data
           this.showProgressBar = false
         })
     } else {
-      this.laborData = this.labors["labors"]
+      this.laborData = this.labors.labors
     }
 
 
