@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { LaborService } from 'app/services/labor/labor.service'
+import { LaborSharedService } from 'app/services/labor/labor-shared.service'
+
 import { Labor } from 'app/interfaces/labor.interface'
 
-import { ActivatedRoute } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 
 export interface PeriodicElement {
   name: string;
@@ -30,19 +32,32 @@ export class EventDetailComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'go'];
   dataSource = ELEMENT_DATA;
 
+  labors: LaborSharedService
+  laborData: Labor
+
   constructor(
     private _laborService: LaborService,
-    private activatedRoute: ActivatedRoute
+    private _laborSharedService: LaborSharedService,
+    private activatedRoute: ActivatedRoute,
+    private _router: Router
 
   ) { }
 
   ngOnInit(): void {
-
-
+    this.labors = this._laborSharedService
     let id = this.activatedRoute.snapshot.params.id
     console.log(id)
 
+    if (this.labors && this.labors.labors) {
+      this.laborData = this.labors.labors.filter( labor => {
+      return labor._id == id
+      })[0]
+    } else {
+      this._router.navigate(['/events']);
+    }
+    
 
+    console.info(this.laborData)
   }
 
 

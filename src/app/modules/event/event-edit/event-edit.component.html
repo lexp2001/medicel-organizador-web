@@ -1,17 +1,41 @@
 <div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div
+        class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+        <div class="flex-1 min-w-0">
+            <!-- Breadcrumbs -->
+            <div class="flex flex-wrap items-center font-medium">
+                <div>
+                    <a class="whitespace-nowrap text-primary-500">Editar</a>
+                </div>
+            </div>
+            <!-- Title -->
+            <div class="mt-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                    Faena
+                </h2>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Main -->
     <div class="flex-auto p-6 sm:p-10">
         <div class="max-w-3xl">
-            <form class="flex flex-col mt-4 px-8 pt-10 bg-card shadow rounded overflow-hidden">
-                <p class="text-lg font-medium">Profile</p>
+            <form [formGroup] = "faenasGroup" 
+                  (ngSubmit)="onSubmit()" 
+                  class="flex flex-col px-8 pt-10 bg-card shadow rounded overflow-hidden">
+                <p class="text-lg font-medium">Datos de Faena</p>
                 <p class="text-secondary mb-6">
-                    People here will get to know you with this information
+                    Llene cada uno de los campos a continuación, toda la información es obligatoria.
                 </p>
                 <div class="flex flex-col gt-xs:flex-row">
 
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
+                            [formControlName]="'name'"
                             [placeholder]="'Nombre de la Faena (Obra)'">
                         <mat-icon
                             class="icon-size-5"
@@ -22,6 +46,7 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
+                            [formControlName]="'client'"
                             [placeholder]="'Nombre del Cliente'">
                         <mat-icon
                             class="icon-size-5"
@@ -33,6 +58,7 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
+                            [formControlName]="'img'"
                             [placeholder]="'URL de imagen de portada'">
                         <mat-icon
                             class="icon-size-5"
@@ -42,6 +68,7 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
+                            [formControlName]="'dateCreation'"
                             [placeholder]="'Fecha de inicio de la obra'">
                         <mat-icon
                             class="icon-size-5"
@@ -51,6 +78,7 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
+                            [formControlName]="'city'"
                             [placeholder]="'Ciudad'">
                         <mat-icon
                             class="icon-size-5"
@@ -60,7 +88,8 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
-                            [placeholder]="'Estado'">
+                            [formControlName]="'country'"
+                            [placeholder]="'País'">
                         <mat-icon
                             class="icon-size-5"
                             matPrefix
@@ -69,6 +98,7 @@
                     <mat-form-field class="flex-auto gt-xs:pl-3">
                         <input
                             matInput
+                            [formControlName]="'address'"
                             [placeholder]="'Dirección'">
                         <mat-icon
                             class="icon-size-5"
@@ -81,7 +111,8 @@
                     <mat-form-field class="fuse-mat-textarea flex-auto">
                         <textarea
                             matInput
-                            [placeholder]="'Descripción'"
+                            [formControlName]="'description'"
+                            [placeholder]="'Description'"
                             [rows]="3"></textarea>
 
                         <mat-icon
@@ -96,20 +127,24 @@
                 <div>
                     <mat-checkbox
                     [color]="'primary'"
-                    [formControlName]="'rememberMe'">
+                    [formControlName]="'status'">
                   Status
                 </mat-checkbox>
                 </div>
 
                 <div class="flex items-center justify-end border-t -mx-8 mt-8 px-8 py-5 bg-gray-50 dark:bg-gray-700">
-                    <button mat-button>
-                        Cancel
+                    <button 
+                        type="button"
+                        (click) = "back()"
+                        mat-button>
+                        Cancelar
                     </button>
                     <button
                         class="px-6 ml-3"
                         mat-flat-button
+                        type="submit"
                         [color]="'primary'">
-                        Save
+                        Guardar
                     </button>
                 </div>
           
