@@ -31,7 +31,8 @@ export class EventEditComponent implements OnInit {
     status: new FormControl(),
     type: new FormControl(),
     _id: new FormControl(),
-  });
+  })
+  currentIndex: number
 
   constructor(
     private _laborService: LaborService,
@@ -45,6 +46,24 @@ export class EventEditComponent implements OnInit {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.faenasGroup.value);
+    if (this.currentIndex) {
+      this._laborService.update(this.faenasGroup.value).
+      subscribe(data=>{
+        console.info(data)
+        this.laborData = data
+        this.labors.labors[this.currentIndex] = this.faenasGroup.value
+        //this.faenasGroup.setValue(this.laborData)
+      })
+    } else {
+      this._laborService.create(this.faenasGroup.value).
+      subscribe(data=>{
+        console.info(data)
+        this.laborData = data
+        this.labors.labors[this.currentIndex] = this.faenasGroup.value
+        //this.faenasGroup.setValue(this.laborData)
+      })
+    }
+    
   }
   back(): void {
     this.location.back()
@@ -54,23 +73,35 @@ export class EventEditComponent implements OnInit {
 
 
     this.labors = this._laborSharedService
-    let id = this.activatedRoute.snapshot.params.id
-    console.log(id)
+    this.currentIndex = this.activatedRoute.snapshot.params.id
+    console.log(this.currentIndex)
 
-    if (this.labors && this.labors.labors) {
-      this.laborData = this.labors.labors.filter(labor => {
-        return labor._id == id
-      })[0]
-    } else {
+    if (!this.labors || !this.labors.labors) {
       this._router.navigate(['/events']);
     }
 
-    // this.faenasGroup.setValue({
-    //   name: this.laborData.name,
-    //   status: this.laborData.status
-    // })
-    this.faenasGroup.setValue(this.laborData)
-    console.info(this.laborData)
+    if (!this.currentIndex) {
+      this.faenasGroup.setValue(
+        {
+          _id: null,
+          city: "",
+          client:  "",
+          country:"",
+          address: "",
+          dateCreation:  "",
+          description:  "",
+          img:  "",
+          name:  "",
+          organization: "sigdokoppers",
+          status: true,
+          type: ""
+        }
+      )
+    } else {
+
+    console.info(this.labors.labors[this.currentIndex])
+    this.faenasGroup.setValue(this.labors.labors[this.currentIndex])}
+    
 
   }
 

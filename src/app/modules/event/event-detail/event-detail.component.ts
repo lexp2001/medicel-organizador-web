@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LaborService } from 'app/services/labor/labor.service'
 import { LaborSharedService } from 'app/services/labor/labor-shared.service'
 
 import { Labor } from 'app/interfaces/labor.interface'
@@ -24,9 +23,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
-  styleUrls: ['./event-detail.component.scss'],
-  providers: [LaborService]
-})
+  styleUrls: ['./event-detail.component.scss']})
 export class EventDetailComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'go'];
@@ -34,9 +31,9 @@ export class EventDetailComponent implements OnInit {
 
   labors: LaborSharedService
   laborData: Labor
+  currentIndex: number
 
   constructor(
-    private _laborService: LaborService,
     private _laborSharedService: LaborSharedService,
     private activatedRoute: ActivatedRoute,
     private _router: Router
@@ -45,19 +42,14 @@ export class EventDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.labors = this._laborSharedService
-    let id = this.activatedRoute.snapshot.params.id
-    console.log(id)
+    this.currentIndex = this.activatedRoute.snapshot.params.id
+    console.log(this.currentIndex)
 
-    if (this.labors && this.labors.labors) {
-      this.laborData = this.labors.labors.filter( labor => {
-      return labor._id == id
-      })[0]
-    } else {
+    if (!this.labors || !this.labors.labors) {
       this._router.navigate(['/events']);
     }
     
-
-    console.info(this.laborData)
+    console.info(this.labors.labors[this.currentIndex])
   }
 
 

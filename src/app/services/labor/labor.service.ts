@@ -96,11 +96,34 @@ export class LaborService
      */
     update(labor: Labor): Observable<any>
     {
-        return this._httpClient.patch<Labor>('api/common/labor', {labor}).pipe(
+        console.info(labor)
+        console.info('https://medicel.azurewebsites.net/api/UpdateLaborById/'+ labor._id)
+        return this._httpClient.put<Labor>('https://medicel.azurewebsites.net/api/UpdateLaborById/'+ labor._id, labor).pipe(
             map((response) => {
-                this._labor.next(response);
+                console.info(response)
+                return response["value"]
                 
             })
         );
     }
+
+    /**
+     * Update the labor
+     *
+     * @param labor
+     */
+     create(labor: Labor): Observable<any>
+     {
+         delete labor._id
+         console.info(labor)
+         console.info('https://medicel.azurewebsites.net/api/CreateLabor')
+         return this._httpClient.post<Labor>('https://medicel.azurewebsites.net/api/CreateLabor', labor).pipe(
+             map((response) => {
+                 console.info(response)
+                 return response["value"]
+                 
+             })
+         );
+     }
+
 }

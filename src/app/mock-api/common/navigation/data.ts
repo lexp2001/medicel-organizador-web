@@ -31,7 +31,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         title: 'Trabajadores',
         type : 'basic',
         icon : 'heroicons_outline:user-group',
-        link : '/example'
+        link : '/workers'
     },
 
     {
