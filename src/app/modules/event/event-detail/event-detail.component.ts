@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LaborSharedService } from 'app/services/labor/labor-shared.service'
+import { LaborService } from 'app/services/labor/labor.service'
+import readXlsxFile from 'read-excel-file'
+
 
 import { Labor } from 'app/interfaces/labor.interface'
 
@@ -35,10 +38,35 @@ export class EventDetailComponent implements OnInit {
 
   constructor(
     private _laborSharedService: LaborSharedService,
+    private laborService: LaborService,
     private activatedRoute: ActivatedRoute,
     private _router: Router
 
   ) { }
+
+  onFileSelected(event) {
+
+    const file:File = event.target.files[0];
+
+    if (file) {
+
+        console.info(file.name)
+
+        readXlsxFile(file).then((rows) => {
+          // `rows` is an array of rows
+          // each row being an array of cells.
+          console.info(rows)
+          this.laborService.uploadSchedules(rows).
+            subscribe(data=>{
+              console.info(data)
+              this._router.navigate(['/schedule']);
+            })
+        })
+      
+
+        
+    }
+}
 
   ngOnInit(): void {
     this.labors = this._laborSharedService

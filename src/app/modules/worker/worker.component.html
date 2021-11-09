@@ -39,11 +39,34 @@
                     Carga masiva (Excel) ...
                 </button> -->
 
-                <input type="file" class="file-input"
-                    (change)="onFileSelected($event)" #fileUpload>
+                <!-- <input type="file" mat-raised-button class="ml-4" style="float:right;"
+                    (change)="onFileSelected($event)" #fileUpload> -->
 
-                <button mat-raised-button style="float:right;" class=" ml-4">Agregar Trabajador</button>
-                <button mat-raised-button style="float:right;">Enviar Notificación</button>
+                    <mat-form-field class="filecontainer">
+
+                        <div class="myfilebrowser">
+                    
+                          <mat-toolbar>
+                    
+                            <!-- Readonly Input to show File names -->
+                            <input matInput  readonly name="memberContactNo" /><mat-icon class="icon-size-5 mr-2 ml-0" [svgIcon]="'upload_file'"></mat-icon>Carga masiva (Excel) ...
+                    
+                            <!-- Browse Button -->
+                            <!-- <button mat-flat-button color="primary">
+                                Carga masiva (Excel) ...
+                            </button> -->
+                    
+                          </mat-toolbar>
+                    
+                          <!-- Fetch selected filed on change -->
+                          <input type="file" #UploadFileInput id="fileUpload" (change)="onFileSelected($event)" name="fileUpload"/>
+                    
+                        </div>
+                    
+                    </mat-form-field>
+
+                <button mat-stroked-button style="float:right;" class=" ml-4">Agregar Trabajador</button>
+                <button mat-stroked-button style="float:right;">Enviar Notificación</button>
             </div>
         </div>
 

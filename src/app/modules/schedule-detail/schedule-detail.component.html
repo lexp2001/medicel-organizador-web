@@ -7,15 +7,15 @@
 
             <!-- About me -->
             <fuse-card class="flex flex-col max-w-80 w-full p-8">
-                <div class="text-2xl font-semibold leading-tight">Salares Norte</div>
+                <div class="text-2xl font-semibold leading-tight">La Calera</div>
                 <div class="mt-4">
-                    Datos de para la realización del Test.
+                    jj perez 95, oficina 6, calera (frente a ripley).
                 </div>
                 <hr class="w-full border-t my-6">
                 <div class="flex flex-col">
                     <div class="flex items-center">
                         <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
-                        <span class="leading-none">Calle Z, Santaiago</span>
+                        <span class="leading-none">Quebrada Blanca</span>
                     </div>
                     <div class="flex items-center mt-4">
                         <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:office-building'"></mat-icon>
@@ -23,11 +23,11 @@
                     </div>
                     <div class="flex items-center mt-4">
                         <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
-                        <span class="leading-none">20 Octubre</span>
+                        <span class="leading-none">30 Diciembre - 10:00am</span>
                     </div>
                     <div class="flex items-center mt-4">
                         <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:beaker'"></mat-icon>
-                        <span class="leading-none">Test PCR</span>
+                        <span class="leading-none">Test</span>
                     </div>
                 </div>
 
@@ -73,42 +73,42 @@
     <div class="flex flex-auto justify-center w-full max-w-5xl mx-auto p-6 sm:p-8">
 
         
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mr-6 ml-6">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 ">
 
             <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
+          The actual rendered columns are set as a property on the row definition" -->
 
             <!-- Position Column -->
-            <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef> Semana </th>
-                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
-
-            <!-- Name Column -->
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Sede de Toma de Muestra </th>
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
                 <td mat-cell *matCellDef="let element"> {{element.name}} </td>
             </ng-container>
 
+            <!-- Name Column -->
+            <ng-container matColumnDef="rut">
+                <th mat-header-cell *matHeaderCellDef> Rut </th>
+                <td mat-cell *matCellDef="let element"> {{element.rut}} </td>
+            </ng-container>
+
             <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-                <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
-                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> Email </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
             </ng-container>
 
             <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
+            <ng-container matColumnDef="celular">
                 <th mat-header-cell *matHeaderCellDef> Celular </th>
-                <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.celular}} </td>
             </ng-container>
 
             <!-- Symbol Column -->
             <ng-container matColumnDef="go">
-                <th mat-header-cell *matHeaderCellDef>  &nbsp; </th>
+                <th mat-header-cell *matHeaderCellDef> &nbsp; </th>
                 <td mat-cell *matCellDef="let element">
                     <button mat-icon-button aria-label="Ver detalles de Testeos">
                         <mat-icon>search</mat-icon>
-                      </button>
+                    </button>
                 </td>
             </ng-container>
 

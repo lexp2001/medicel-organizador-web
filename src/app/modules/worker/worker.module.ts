@@ -16,8 +16,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
-import {MatStepperModule} from '@angular/material/stepper';
-
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 import { WorkerComponent } from './worker.component';
@@ -60,7 +60,8 @@ const routes: Routes = [
     MatSelectModule,
     SharedModule,
     FuseCardModule,
-    MatStepperModule
+    MatStepperModule,
+    MatToolbarModule
   ]
 })
 export class WorkerModule { }

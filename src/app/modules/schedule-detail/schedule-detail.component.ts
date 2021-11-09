@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LaborService } from 'app/services/labor/labor.service'
 
 export interface PeriodicElement {
   name: string;
@@ -24,12 +25,26 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ScheduleDetailComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'go'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['rut', 'name', 'celular', 'email', 'go'];
+  dataSource: any;
 
-  constructor() { }
+  constructor(
+    private laborService: LaborService,
+  ) { }
+
+  getSchedules() {
+    this.laborService.getSchedules()
+      .subscribe(data => {
+        console.log(data)
+        // this.dataSource = data.map(t => {
+        //   return t["name"], t["rut"], t["celular"], t["email"]
+        // })
+        this.dataSource = data
+      })
+  }
 
   ngOnInit(): void {
+    this.getSchedules()
   }
 
 }

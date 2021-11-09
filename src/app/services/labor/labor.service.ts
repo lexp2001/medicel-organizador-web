@@ -129,4 +129,28 @@ export class LaborService {
         );
     }
 
+
+    uploadSchedules(schedule: any): Observable<any> {
+        console.info(schedule)
+        return this._httpClient.post<Labor>('https://medicel.azurewebsites.net/api/CreateLaborTest', schedule).pipe(
+            map((response) => {
+                console.info(response)
+                return response
+
+            })
+        );
+    }
+
+    getSchedules(): Observable<Labor[]> {
+        return this._httpClient.get<Labor[]>('https://medicel.azurewebsites.net/api/GetLaborTests').pipe(
+            tap((labors) => {
+                console.info("response:", labors)
+                this._labors = labors
+                //this._labor.next(labor);
+            })
+        );
+    }
+
+    
+
 }
