@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkerService } from 'app/services/worker.service'
 import { Worker } from 'app/interfaces/worker.interface'
+import { LaborSharedService } from 'app/services/labor/labor-shared.service'
 
 export interface PeriodicElement {
   name: string;
@@ -31,16 +32,20 @@ export interface PeriodicElement {
 })
 export class WorkerComponent implements OnInit {
 
+  laborSharedService: LaborSharedService
+
   //displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'go'];
   displayedColumns: string[] = ['name', 'rut', 'email', 'phone', 'go'];
 
   public workerList = []
+  public companyList = []
 
   //dataSource = ELEMENT_DATA;
   dataSource: Worker[]
-  
+
   constructor(
-    private workerService: WorkerService
+    private workerService: WorkerService,
+    private _laborSharedService: LaborSharedService
   ) { }
 
   getWorkers() {
@@ -52,6 +57,8 @@ export class WorkerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.laborSharedService = this._laborSharedService
+    console.log(this.laborSharedService.labors)
     this.getWorkers()
   }
 

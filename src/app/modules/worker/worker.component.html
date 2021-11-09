@@ -28,9 +28,9 @@
 
                 <mat-form-field class="flex-auto" style="min-width: 250px;">
                     <mat-select [value]="'EU'">
-                        <mat-option [value]="'EU'">Quebrada Blanca II: Test 8</mat-option>
-                        <mat-option [value]="'US'">Salas de Chancado y Sistema de Transporte Intermedio Chuquicamata
-                            Subterránea</mat-option>
+                        <!-- <mat-option [value]="'EU'">Quebrada Blanca II: Test 8</mat-option>
+                        <mat-option [value]="'EU'">Quebrada Blanca II: Test 8</mat-option> -->
+                        <mat-option *ngFor="let labor of laborSharedService.labors, let nameIndex = index" [value]="'US'">{{labor.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
 
