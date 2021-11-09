@@ -1,7 +1,5 @@
 <div style="width: 100%!important;">
 
-
-
     <!-- Header -->
     <div
         class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
@@ -30,8 +28,9 @@
 
                 <mat-form-field class="flex-auto" style="min-width: 250px;">
                     <mat-select [value]="'EU'">
-                        <mat-option [value]="'EU'">Quebrada Blanca II: Test 8</mat-option>
-                        <mat-option [value]="'US'">Salas de Chancado y Sistema de Transporte Intermedio Chuquicamata Subterránea</mat-option>
+                        <!-- <mat-option [value]="'EU'">Quebrada Blanca II: Test 8</mat-option>
+                        <mat-option [value]="'EU'">Quebrada Blanca II: Test 8</mat-option> -->
+                        <mat-option *ngFor="let labor of laborSharedService.labors, let nameIndex = index" [value]="'US'">{{labor.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
 
@@ -48,10 +47,7 @@
             </div>
         </div>
 
-
-
         <div class="flex flex-auto justify-center w-full max-w-400 mx-auto mt-8">
-
 
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 ">
 
@@ -59,27 +55,27 @@
               The actual rendered columns are set as a property on the row definition" -->
 
                 <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                    <th mat-header-cell *matHeaderCellDef> Semana </th>
-                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-                </ng-container>
-
-                <!-- Name Column -->
                 <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef> Sede de Toma de Muestra </th>
+                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
                 </ng-container>
 
+                <!-- Name Column -->
+                <ng-container matColumnDef="rut">
+                    <th mat-header-cell *matHeaderCellDef> Rut </th>
+                    <td mat-cell *matCellDef="let element"> {{element.rut}} </td>
+                </ng-container>
+
                 <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                    <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
-                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef> Email </th>
+                    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
                 </ng-container>
 
                 <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
+                <ng-container matColumnDef="phone">
                     <th mat-header-cell *matHeaderCellDef> Celular </th>
-                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
                 </ng-container>
 
                 <!-- Symbol Column -->
