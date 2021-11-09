@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import readXlsxFile from 'read-excel-file'
 
 export interface PeriodicElement {
   name: string;
@@ -16,6 +17,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 47894654878, name: 'Juan Carlos García', weight: '29/01/1997', symbol: '9 12 456789789'},
 ];
 
+
+
 @Component({
   selector: 'app-worker',
   templateUrl: './worker.component.html',
@@ -27,6 +30,26 @@ export class WorkerComponent implements OnInit {
   dataSource = ELEMENT_DATA;
 
   constructor() { }
+
+  onFileSelected(event) {
+
+    const file:File = event.target.files[0];
+
+    if (file) {
+
+        console.info(file.name)
+
+        readXlsxFile(file).then((rows) => {
+          // `rows` is an array of rows
+          // each row being an array of cells.
+          console.info(rows)
+        })
+      
+
+        
+    }
+}
+
 
   ngOnInit(): void {
   }

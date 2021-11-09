@@ -35,10 +35,14 @@
                     </mat-select>
                 </mat-form-field>
 
-                <button mat-raised-button class="ml-4" style="float:right;">
+                <!-- <button mat-raised-button class="ml-4" style="float:right;">
                     <mat-icon class="icon-size-5 mr-3" [svgIcon]="'upload_file'"></mat-icon>
                     Carga masiva (Excel) ...
-                </button>
+                </button> -->
+
+                <input type="file" class="file-input"
+                    (change)="onFileSelected($event)" #fileUpload>
+
                 <button mat-raised-button style="float:right;" class=" ml-4">Agregar Trabajador</button>
                 <button mat-raised-button style="float:right;">Enviar Notificación</button>
             </div>
