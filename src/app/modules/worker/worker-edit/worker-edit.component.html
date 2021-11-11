@@ -1,227 +1,200 @@
-  <mat-stepper  #stepper>
+<mat-stepper #stepper>
     <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Perfil</ng-template>
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Nombre y Apellido</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input 
-                    matInput
-                    [formControlName]="'name'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:user'"></mat-icon>
-            </mat-form-field>
-        </div>
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Perfil</ng-template>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Nombre y Apellido</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'name'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:user'"></mat-icon>
+                </mat-form-field>
+            </div>
 
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Rut</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'rut'"
-                    [placeholder]="'Rut'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:table'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Rut</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'rut'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:table'"></mat-icon>
+                </mat-form-field>
+            </div>
 
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Fecha de Nacimiento</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'birthday'"
-                    
-                    [placeholder]="'Fecha de Nacimiento'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:calendar'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Fecha de Nacimiento</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'birthday'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:calendar'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Email</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'email'"
-                    [placeholder]="'Email'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Email</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'email'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:mail'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Teléfono Celular</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'telephone'"
-                    [placeholder]="'Teléfono Celular'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:phone'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Teléfono Celular</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'telephone'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:phone'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Calle Domicilio</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'Street'"
-                    [placeholder]="'Calle Domicilio'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:home'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Calle Domicilio</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'Street'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:home'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Comuna Domicilio</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'commune'"
-                    [placeholder]="'Comuna Domicilio'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:home'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Comuna Domicilio</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'commune'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:home'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Pase de movilidad</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'pass'"
-                    [placeholder]="'Pase de movilidad'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:cloud'"></mat-icon>
-            </mat-form-field>
-        </div>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Pase de movilidad</span>
+                <mat-form-field class="flex-auto input-no-marginbottom">
+                    <input matInput [formControlName]="'pass'" required>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:cloud'"></mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-button matStepperNext>Siguiente</button>
+            </div>
+        </form>
     </mat-step>
-    
+
     <mat-step [stepControl]="secondFormGroup" label="Salud">
-      <form [formGroup]="secondFormGroup">
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Previsión de Salud</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'email'"
-                    [placeholder]="'Previsión de Salud'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-            </mat-form-field>
-        </div>
+        <form [formGroup]="secondFormGroup">
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">Previsión de Salud</span>
+                <mat-form-field class="flex-auto gt-xs:pr-3">
+                    <mat-select [placeholder]="'Selecciona una opción'">
+                        <mat-option value="country-1">Isapre</mat-option>
+                        <mat-option value="country-2">Fonasa</mat-option>
+                    </mat-select>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:heart'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Te has vacunado contra el COVID-19?</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'email'"
-                    [placeholder]="'Te has vacunado contra el COVID-19?'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">¿A cuál estás afiliado?</span>
+                <mat-form-field class="flex-auto gt-xs:pr-3">
+                    <mat-select [placeholder]="'Selecciona una opción'">
+                        <mat-option value="country-1">Colmena</mat-option>
+                        <mat-option value="country-2">Banmedica</mat-option>
+                        <mat-option value="country-3">Cruz Blanca</mat-option>
+                        <mat-option value="country-3">Vida 3</mat-option>
+                        <mat-option value="country-3">Consalud</mat-option>
+                        <mat-option value="country-3">Más Vida</mat-option>
+                        <mat-option value="country-3">Otro</mat-option>
+                    </mat-select>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:clipboard-list'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">¿Te has vacunado contra el COVID-19?</span>
+                <mat-form-field class="flex-auto gt-xs:pr-3">
+                    <mat-select [placeholder]="'Selecciona una opción'">
+                        <mat-option value="country-1">Si, solo la primera dosis</mat-option>
+                        <mat-option value="country-2">Si, primera y segunda dosis</mat-option>
+                        <mat-option value="country-3">No, ninguna</mat-option>
+                    </mat-select>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:document-add'"></mat-icon>
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">¿Que vacuna?</span>
+                <mat-form-field class="flex-auto gt-xs:pr-3">
+                    <mat-select [placeholder]="'Selecciona una opción'">
+                        <mat-option value="country-1">Pfizer</mat-option>
+                        <mat-option value="country-2">Sinovac</mat-option>
+                        <mat-option value="country-3">Cansino</mat-option>
+                        <mat-option value="country-3">Astrazeneca</mat-option>
+                        <mat-option value="country-3">No la recuerdo</mat-option>
+                        <mat-option value="country-3">Otra</mat-option>
+                        <mat-option value="country-3">Ninguna</mat-option>
+                    </mat-select>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:document-search'"></mat-icon>
+                </mat-form-field>
+            </div>
+
+
+            <div>
+                <button mat-button matStepperPrevious>Anterior</button>
+                <button mat-button matStepperNext>Siguiente</button>
+            </div>
+        </form>
     </mat-step>
 
     <mat-step>
-      <ng-template matStepLabel>COVID-19</ng-template>
-      <form [formGroup]="secondFormGroup">
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Email Address</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'email'"
-                    [placeholder]="'Email Address'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-            </mat-form-field>
-        </div>
+        <ng-template matStepLabel>COVID-19</ng-template>
+        <form [formGroup]="secondFormGroup">
+            <h3 class="font-semibold mb-1">
+                Control Acceso Recinto - Covid19
+            </h3>
+            <p class="font-semibold mb-1">
+                El llenado de este cuestionario es personal y es de responsabilidad exclusiva de la persona, trabajador
+                o cualquier persona que ingrese al recinto.
+            </p >
+            <p class="font-semibold mb-1">
+                Debe ser completado diariamente y es requisito para poder ingresar al recinto asignado. Recuerde que,
+                acorde a las autoridades sanitarias, de tener síntomas relacionados a COVID-19 o de haber tenido
+                contacto estrecho no debe salir de suresidencia.
+            </p>
+            <p class="font-semibold mb-1">
+                Los datos de este formulario son confidenciales y solo para uso médico.
+            </p>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Email Address</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'email'"
-                    [placeholder]="'Email Address'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1 ">¿Has tenido contacto estrecho con una persona enferma de COVID-19
+                    durante los últimos 5 días?</span>
+                <mat-form-field class="flex-auto gt-xs:pr-3">
+                    <mat-select [placeholder]="'Selecciona una opción'">
+                        <mat-option value="country-2">Si</mat-option>
+                        <mat-option value="country-3">No</mat-option>
+                    </mat-select>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:users'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-        <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
-            <span  class="font-semibold mb-1">Email Address</span>
-            <mat-form-field class="flex-auto input-no-marginbottom">
-                <input
-                    matInput
-                    [formControlName]="'email'"
-                    [placeholder]="'Email Address'"
-                    required>
-                <mat-icon
-                    class="icon-size-5"
-                    matPrefix
-                    [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-            </mat-form-field>
-        </div>
+            <div class="flex flex-col gt-xs:flex-row gt-xs:items-baseline">
+                <span class="font-semibold mb-1">¿Has presentado algunos de estos síntomas en los últimos 3 días?</span>
+                <mat-form-field class="flex-auto gt-xs:pr-3">
+                    <mat-select [placeholder]="'Selecciona una opción'">
+                        <mat-option value="country-1">Sin síntomas</mat-option>
+                        <mat-option value="country-2">Fiebre (37,8 °C o más) </mat-option>
+                        <mat-option value="country-3">Tos</mat-option>
+                        <mat-option value="country-3">Disnea o dificultad</mat-option>
+                        <mat-option value="country-3">Dolor torácico</mat-option>
+                        <mat-option value="country-3">Odinofagía o dolor de garganta al comer</mat-option>
+                        <mat-option value="country-3">Mialgias o dolores musculares</mat-option>
+                        <mat-option value="country-3">Escalofríos</mat-option>
+                        <mat-option value="country-3">Cefalea o dolor de cabeza</mat-option>
+                        <mat-option value="country-3">Diarrea</mat-option>
+                        <mat-option value="country-3">Pérdida brusca del olfato o anosmia</mat-option>
+                        <mat-option value="country-3">Pérdida brusca del gusto o ageusia</mat-option>
+                    </mat-select>
+                    <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:heart'"></mat-icon>
+                </mat-form-field>
+            </div>
 
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-      </div>
-      </form>
+    
+            <div>
+                <button mat-button matStepperPrevious>Anterior</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </form>
     </mat-step>
-  </mat-stepper>
-  
+</mat-stepper>
